@@ -39,8 +39,12 @@ class Cat
 
 
 $cats = array();
+
 for ($i = 1; $i < 11; $i++) {
-    $cats[$i] = new Cat ($i, $i, array('red', 'black', 'white'));
+    $cats[$i] = new Cat ($i, $i+1, array('red', 'black', 'white'));
+
+
+  
     echo '<br>Cat #' . $i . ' was created';
 }
 
