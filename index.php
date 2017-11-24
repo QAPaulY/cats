@@ -26,9 +26,11 @@ class Cat//initiation class cat
     }
 
 
-    public function error()
+    public function error($err)
     {
-
+        if ($err != true) {
+            throw new Exception("\n That's my error");
+        }
 
     }
 
@@ -73,8 +75,11 @@ if ($meny > 1) {//the addition of the square roots of the cat's sprouts older th
 }
 echo "\n  Old is " . $old;
 
-
-$cats[rand(1, 5)]->error();//calling error function for random item of cats
+Try {
+    $cats[rand(1, 5)]->error(false);//calling error function for random item of cats
+} catch (Exception $e) {//catch extention of function error
+    echo $e->getMessage();
+}
 
 
 for ($i = 1; $i < 100; $i++) {//The nested loop checks the division of the value by 29 without residue
