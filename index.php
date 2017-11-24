@@ -39,8 +39,8 @@ class Cat//initiation class cat
 
 
 $cats = array(); //initiation array cats
-for ($i = 1; $i < 11; $i++) { //creation items of 'cats' class
-    $cats[$i] = new Cat ($i, $i + 1, array('red', 'black', 'white'));
+for ($i = 1; $i < 6; $i++) { //creation items of 'cats' class
+    $cats[$i] = new Cat ($i, $i, array('red', 'black', 'white'));
     echo "\n Cat #" . $i . ' was created';
 }
 
